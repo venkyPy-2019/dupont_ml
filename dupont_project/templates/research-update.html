@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<section style="padding-top: 120px;">
+ <div class="container px-4 pt-5">
+  <div class="row ps-3 pt-5 pb-2">
+    <div class="col-md-12 pt-4">
+     <span class="banner-text-in">Research Update</span>
+   </div>
+ </div>
+</div>
+</section>
+
+<section>
+  <div class="container px-xl-5 my-5">
+    {% for blog in blogs %}    
+    <div class="bg-white con-drop p-xl-5 my-5 px-sm-2 blog_div" style="display: none;">
+      <div class="row px-sm-2">
+        <div class=" px-sm-0 border-0">
+          <div class="row py-sm-2 px-sm-1">
+            <div class="col-md-5">
+              <img class="img-fluid" src="{{blog.blog_image.url}}" alt="Blog Image" width="440px" height="300px">
+            </div>
+            <div class="col-md-7 py-xl-3 p-5 p-md-0">
+              <div class="card-body px-xl-0  marleft align-middle px-sm-5">
+                <p class="card-text mb-sm-0"><small>{{ blog.blog_date }}</small></p>
+                <h1 class="card-title">{{ blog.blog_title }}</h1>
+                <p class="card-text text-center" >{{ blog.blog_desc|safe }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="row justify-content-end">
+      <div class="col-md-2  px-0 more-art"><a href="#" id="loadMore">More Articles</a></div>
+
+  </div>
+
+</div>
+</section>
+
+<script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+<script type="text/javascript">
+  $('#ru_li').addClass('active');
+
+  $(function () {
+    $(".blog_div").slice(0, 3).show();
+    $("#loadMore").on('click', function (e) {
+      e.preventDefault();
+      $(".blog_div:hidden").slice(0, 3).slideDown();
+      if ($(".blog_div:hidden").length == 0) {
+        $("#loadMore").fadeOut('slow');
+      }
+      $('html,body').animate({
+        scrollTop: $(this).offset().top
+      }, 1500);
+    });
+  });
+
+</script>
+{% endblock %}

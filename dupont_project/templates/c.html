@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container" style="padding-top: 120px;">
+
+  <div class="in-header cl-md-12 row mt-md-5 py-md-5">
+   <h1>Contact Us</h1>
+ </div>
+</div>
+
+<div class="container">
+ <div class="row bargin-bottom-20px">
+  <div class="col-md-6 col-sm-12  h-l form-area">
+
+   <!-- start form area-->
+   <form class="form-horizontal" id="contact_form_id">
+    {% csrf_token %}
+    <div class="gap col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+
+      <div class="svtc">
+       <div class="information-section">
+        <div>
+         <div class="information">
+          <h2>Get Connected</h2>
+        </div>		
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p class="fieldspace"><span class="requiredtext_form"><span class="required">*</span>Note: Required fields</span></p><br>
+    </div>
+  </div>
+
+
+  <!--  redundant fields end -->
+
+  <fieldset>
+   <legend> </legend>
+   <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <!-- First Name -->
+        <div class="col-lg-6 col-md-6 col-sm-12">
+
+         <div class="required-field form-group halfAvailableWidth has-feedback">
+           <label class="label-position top control-label" for="first_name">First name
+             <span class="required">*</span>
+           </label>
+           <input class="form-control halfAvailableWidth dangerousSymbolsCheck  text-box single-line requiredinput fnameval" id="first_name" name="first_name" placeholder="First name" style="" type="text">
+           <span class="field-validation-valid required errormessagefname" style="display: none;">Enter first name.</span>
+         </div>
+
+
+       </div>
+
+       <!-- Last Name -->
+       <div class="col-lg-6 col-md-6 col-sm-12">                         
+         <div class="required-field form-group halfAvailableWidth has-feedback">
+           <label class="control-label" for="last_name">Last name
+             <span class="required">*</span></label>
+             <input class=" form-control halfAvailableWidth dangerousSymbolsCheck text-box single-line requiredinput lnameval" id="last_name" name="last_name" placeholder="Last name" style="" type="text" value="">
+             <span class="field-validation-valid required errormessagelname" style="display: none;">Enter last name.</span>
+           </div>
+         </div>
+       </div>
+
+       <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <!-- Company Name -->
+          <div class="required-field form-group halfAvailableWidth has-feedback">
+            <label class="control-label" for="company">Company name
+             <span class="required">*</span></label>
+             <input class=" form-control halfAvailableWidth dangerousSymbolsCheck text-box single-line requiredinput cname" id="company" name="company" placeholder="Company name" style="" type="text" value="">
+             <span class="field-validation-valid required errormessagecname" style="display: none;">Enter company name.</span>
+           </div>
+         </div>
+         <!-- Email Address-->
+         <div class="col-lg-6 col-md-6 col-sm-12">
+           <div class="required-field form-group halfAvailableWidth has-feedback">
+            <label class="control-label" for="email">Email address
+             <span class="required">*</span></label>
+             <input class=" form-control halfAvailableWidth dangerousSymbolsCheck text-box single-line requiredinput email" id="email" name="email" placeholder="Email address" style="" type="email" value="">
+             <span class="field-validation-valid required errormessageemail" style="display: none;">Enter email address.</span>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </fieldset>
+
+ <fieldset>
+   <legend> </legend>
+   <div class="row">
+    <!-- Country -->
+    <div class="col-lg-6 col-md-6 col-sm-12">
+
+     <div class="required-field form-group halfAvailableWidth has-feedback">
+      <label class="control-label" for="svtcCountry">Country
+       <span class="required">*</span></label>
+       <select class="form-select" id="country_list" name="country_list" aria-label="Default select example" required="">
+        <option selected>select</option>
+        {% load countries %}
+        {% get_countries as countries %}
+        {% for country in countries %}
+        <option value="{{ country.code }}">{{ country.name }}</option>
+        {% endfor %}
+      </select>
+      <span class="field-validation-valid required errormessagecountry" style="display: none;">Select country.</span>
+    </div>
+
+
+  </div>
+  <!-- Role -->
+  <!-- Phone -->
+  <div class="col-lg-6 col-md-6 col-sm-12">
+
+   <div class="required-field form-group halfAvailableWidth has-feedback">
+    <label class="control-label" for="phone">Phone number <span class="required">*</span></label>
+    <input class=" form-control halfAvailableWidth dangerousSymbolsCheck text-box single-line requiredinput phone" id="phone" name="phone" placeholder="Phone number" style="" type="text" value=""> <span class="field-validation-valid required errormessagephone" style="display: none;">Enter phone number.</span> </div>
+
+
+  </div>
+</div>
+
+
+</fieldset>
+
+<fieldset>
+	<legend> </legend>
+	<div class="row">
+		<div class="col-sm-12">
+
+			<div class="required-field form-group halfAvailableWidth has-feedback">
+				<div>
+					<label class="control-label">How do you prefer to be contacted? <span class="required">*</span></label>
+				</div>
+				<div>
+         <input type="radio" id="radioEmail" class="halfAvailableWidth dangerousSymbolsCheck text-box single-line requiredinput preferredContact" name="prefer_contacted" value="email">
+         <label for="radioEmail">Email</label>
+       </div>
+       <div>
+         <input type="radio" class="halfAvailableWidth dangerousSymbolsCheck text-box single-line requiredinput preferredContact" id="radioPhone" name="prefer_contacted" value="phone">
+         <label for="radioPhone">Phone</label>
+       </div>
+       <span class="field-validation-valid required errormessagepreferredContact" style="display: none;">Please select how you wish to be contacted.</span> </div>
+
+
+
+     </div>
+   </div>
+
+ </fieldset>
+
+ <!-- Comments - Please provide as much detail as possible. -->
+
+ <div class="required-field form-group has-feedback comments-confirm">
+   <label class="control-label" for="description" style="margin-top: 20px;">Have a Question?
+     <span class="required">*</span></label>
+     <textarea class="form-control requiredinput messagesection commentsection" cols="1" id="description" name="description" placeholder="Have a Question, Write to us" rows="4"></textarea>
+     <span class="field-validation-valid required errormessagecomm" style="display: none;">Enter comments.</span>
+   </div>
+
+   <div class=" form-group has-feedback comments-confirm">
+     <div class="radio">
+      <table>
+       <tbody>
+        <tr>
+         <td>
+          <label><input class="inradioBtn" value="0" type="checkbox" id="alerts" name="alerts">I would like to receive news, events and industry insights from DuPont Electronic Solutions and other related DuPont businesses.</label>
+
+        </td>
+					<!--<td>
+						<label><input class="inradioBtn" name="00N30000001Tvd8" type="radio" value="No, thanks">No, thanks</label>
+					</td>-->
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!--<input class="hidden-optin" type="hidden" name="00N30000001Tvd8">                        
+
+
+<fieldset>
+	<legend> </legend>
+  <div class="row svtcCaptcha">
+   <div class="col-md-12 captchavalidate" style="padding-left:0px;">
+
+    <div class="required-field form-group has-feedback captcha">
+     <label class="control-label" for="wffm66462824a5cb477ba5790c3f547b0e37_Sections_5__Fields_0__Value"></label>
+     <div>
+
+
+
+
+      <div class="col-md-12">
+        <div id="response-div" style="color:red; font-weight: bold;"></div>
+        <script src="https://www.google.com/recaptcha/api.js?onload=reCaptchaCallback&amp;render=explicit" async="" defer=""></script>
+
+        <div id="rcaptcha" class="g-recaptcha" data-sitekey="6LcZtWMUAAAAAP9EuGKWA14HBkWKSO7fX1yDy6ej"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LcZtWMUAAAAAP9EuGKWA14HBkWKSO7fX1yDy6ej&amp;co=aHR0cHM6Ly93d3cuZHVwb250LmNvbTo0NDM.&amp;hl=en&amp;v=jxFQ7RQ9s9HTGKeWcoa6UQdD&amp;size=normal&amp;cb=1c1lnhstivub" width="304" height="78" role="presentation" name="a-i6v7r035f8fk" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div> 
+
+        <input type="hidden" value="true" id="recaptchaRequired" name="recaptchaRequired">    
+
+      </div>           
+    </div>
+    <span class="field-validation-valid required errormessagecaptcha" style="display: none;">Please check recaptcha.</span>
+  </div>
+
+
+</div>
+</div>
+</fieldset>-->
+
+
+<div class="form-submit-border comments-confirm">
+  <button class="btn btn-default successButton" type="button" id="svtcContactSubmit">Submit</button>
+  
+</div>
+
+<fieldset>
+	<legend> </legend>
+  <div class="row disclaimer">
+   <div class="col-md-12">
+    <div class="form-group has-feedback">
+     <p>DuPont cares about your privacy. Your personal information (name, eMail, phone number and other contact data) will be stored in chosen customer systems primarily hosted in the United States. This information will be used by DuPont, its affiliates, partners, and selected third parties in other countries to provide you with the product or service information requested. To learn more, please visit&nbsp;<a href="http://www.dupont.com/privacy.html">www.privacy.dupont.com</a>.&nbsp;</p>
+
+   </div>
+ </div>
+</div>
+</fieldset>
+
+</div>
+
+
+
+</form>
+<!--end form area-->
+</div>
+
+<div class="col-md-6 pe-0 pt-5 ps-5" >
+  <div class="row">
+    <div class="col-md-6 information">
+      <h3>Where are we?</h3>
+      <span><p>965 West Maude Ave<br> Sunnyvale, CA, 94085<br> USA</p></span>
+    </div>
+    <div class="col-md-6"><img class="img-fluid" src="{% static 'img/svtc-entrance-sign.jpg' %}"></div>
+  </div>
+
+  <div class="row pe-0 py-4">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d666.379977451937!2d-122.04016467031778!3d37.39325552429071!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3f4c57e0d5a1f9b!2sDuPont%20Silicon%20Valley%20Technology%20%26%20Innovation%20Center!5e0!3m2!1sen!2sus!4v1615803732517!5m2!1sen!2sus" width="600" height="350" style="border:0;" loading="lazy"></iframe>
+
+  </div>
+
+  <div class="py-3">
+    <h3>Parking Available</h3>
+    <p><span class="body2">Parking is available on the side and rear of the facility.</span></p>
+    <img class="img-fluid" src="{% static 'img/tech-center-parking.webp' %}">
+  </div>
+
+
+  <div class="row ps-5">
+   <div class="col-md-4 ps-5"><img src="{% static 'img/kirk120.png' %}" class="rounded-circle py-4"></div>
+   <div class="col-md-7 pt-3">
+    <h6>Kirk Thompson</h6>
+    <p>Global R&D Leader – Advanced Packaging
+      Electronics & Industrial<br/>
+      Email: kirk.r.thompson@dupont.com<br>
+    Phone: 979-665-2500</p>
+  </div>
+</div>
+
+<div class="row ps-5">
+  <div class="col-md-4 ps-5"><img src="{% static 'img/blank.gif' %}" class="rounded-circle py-4"></div>
+  <div class="col-md-7 pt-3">
+    <h6>Michelle Sun, Ph.D.</h6>
+    <p>Digital Transformation Leader
+      DuPont Silicon Valley Technology Center<br/>
+      Email: hui.sun@dupont.com<br>
+    Phone: 408-419-4477</p>
+  </div>
+</div>
+
+<div class="row ps-5">
+  <div class="col-md-4 ps-5"><img src="{% static 'img/blank.gif' %}" class="rounded-circle py-4"></div>
+  <div class="col-md-7 pt-3">
+    <h6>Injamul Azad</h6>
+    <p>Junior Data Analyst
+      DuPont Silicon Valley Technology Center<br/>
+      Email: Injamul.azad@dupont.com<br>
+    Phone: 856-283-9255</p>
+  </div>
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+
+{% endblock %}

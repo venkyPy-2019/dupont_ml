@@ -1,0 +1,449 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<style type="text/css">
+  .more .btn-des {
+    text-align: center;
+    padding: 10px 50px;
+    border-radius: 40px;
+    border: solid 1px #e4001c;
+    text-decoration: none;
+    margin-top: 30px;
+    display: block;
+    width: auto;
+    font-size: 1.5rem;
+  }
+</style>
+<section style="padding-top: 120px;">
+ <div class="container px-4 pt-5">
+  <div class="row ps-3 pt-8">
+    <div class="col-12">
+     <span class="banner-text-in pb-5">Harness the Power <br/>of Prediction Through<br> Machine Learning</span>
+     <div class="p-3"></div>
+     <span class="header-text">
+       <p>Running hundreds of experiments to obtain data takes time, uses significant lab resources, and adds
+        unwanted cost. Our Machine Learning Portal tackle these challenges by using up-to-date, powerful,
+        and tested machine learning methods by taking known information to make models and test them on
+        unknown data of interest. Studies can start sooner. Results can be obtained faster. All while cost is
+      reduced.</p></span>
+      <div class="s-line"></div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section>
+  <div class="container px-4 mt-5 ">
+    <div class="bg-white con-drop p-5">
+      <div class=" row ">
+
+        <div class="col-md-11 in-link">
+          <ul>
+            <li class="active pe-4"><a class="lb-no" href="#">Predictive Search</a></li>
+            <!-- <li><a class="ps-4" href="#">Orginial Dataset</a></li> -->
+          </ul>
+        </div>
+        
+        <div class="col-md-1 ps-5 r-icon"><i class="fas fa-info-circle ps-3 fa-2x"></i></div>
+      </div>
+
+      <div class="row mt-5 pt-5">
+
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+         <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><h3>Model 1</h3><p><b>ICS Electroplating – Processing<br>
+          Condition</b></p></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><h3>Model 2</h3><p><b>ICS Electroplating – Chemical<br>
+          Structure</b></p></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="image-tab" data-bs-toggle="tab" data-bs-target="#image" type="button" role="tab" aria-controls="image" aria-selected="true"><h3>Model 3</h3><p><b>Image<br>
+          Upload</b></p></button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><h3>Model 4</h3><p><b>Under Discussion</b></p></button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+          <div class="row px-0 pt-5 mt-4">
+            <div class="col-md-9">
+              <div class=" con-drop">
+                <div class="bg-secondary mb-3"><h1 class="mb-0 ps-3">Carrier</h1></div>
+                <div class=" ps-3 pe-5 me-5">
+                  <table class="table table-striped px-5">
+                    <thead>
+                      <tr class="t-head">
+                        <th scope="col" class="lb-no"></th>
+                        <th scope="col">Modular Weight</th>
+                        <th scope="col">Weight % of EO</th>
+                        <th scope="col">Functional Group</th>
+                        <th scope="col">BLK<br/>Copolymer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="lb-no td-width t-head">PEG-1000</td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head primary">75-H-90,000</td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head ">50-HB-260</td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head primary">TN-747</td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head">Pluronic L64</td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head primary">PEF-10,000</td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w" id="" placeholder=""></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 pe-0 ps-5 ">
+              <div class="con-drop">
+                <div class="bg-secondary mb-3"><h1 class="mb-0 ps-2">Leveler</h1></div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="lb-no"></th>
+                      <th scope="col" ><div class="bg-primary white p-2 t-head">Value</div>   </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M06</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>     
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M07</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M09</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M13</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M50</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">L003</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="row px-0">
+            <div class="col-md-3"><span class="more"><a href="#"><b>Caluclate</b></a></span></div></div>
+
+
+            <div class="row px-0 pt-5">
+              <div class="text-gry mb-3 pt-5"><h2 class="mb-0 ps-3"><b>Results</b></h2></div>
+              <div class="col-md-8">
+               <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="lb-no border-bottom"></th>
+                    <th scope="col" class="border-bottom" > </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="border-start-0 tb-lh primary border-bottom">CenterTP</th>
+                    <td class="border-bottom"></td>     
+                  </tr>
+                  <tr>
+                    <th scope="row" class="border-start-0 tb-lh primary border-bottom">KneeTP</th>
+                    <td class="border-bottom"></td> 
+                  </tr>
+                  <tr>
+                    <th scope="row" class="border-start-0 tb-lh primary border-bottom">80/100</th>
+                    <td class="border-bottom"></td> 
+                  </tr>
+                  <tr>
+                    <th scope="row" class="border-start-0 tb-lh primary border-bottom">80/125</th>
+                    <td class="border-bottom"></td> 
+                  </tr>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th scope="col" class="lb-no"></th>
+                    <th scope="col" > </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+
+          <!--Module 1 End -->
+
+
+
+        </div>
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+          <!--module 2 Start-->
+          <div class="row px-0 pt-5 mt-4">
+            <div class="col-md-9">
+              <div class=" con-drop">
+                <div class="bg-secondary mb-3"><h1 class="mb-0 ps-3">Concentration</h1></div>
+                <div class=" ps-3 pe-5 me-5">
+                  <table class="table table-striped px-5">
+                    <thead>
+                      <tr class="t-head">
+                        <th scope="col" class="lb-no"></th>
+                        <th scope="col">&nbsp; &nbsp;<br>&nbsp;</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="lb-no td-width t-head">Brightner</td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head primary">Carier</td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head ">CuS04</td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head primary">H2S04</td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head">HCI</td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-cus" id="" placeholder=""></td>
+                      </tr>
+                      <tr>
+                        <td class="lb-no td-width t-head primary">PEF-10,000</td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                        <td> <input type="text" class="form-control-w" id="" placeholder=""></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 pe-0 ps-5 ">
+              <div class="con-drop">
+                <div class="bg-secondary mb-3"><h1 class="mb-0 ps-2">Leveler</h1></div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="lb-no"></th>
+                      <th scope="col" ><div class="bg-primary white p-2 t-head">Value</div>   </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M06</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>     
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M07</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M09</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M13</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">M50</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="lb-no t-head primary">L003</th>
+                      <td> <input type="text" class="form-control-w input-width" id="" placeholder=""></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row px-0">
+            <div class="col-md-3"><span class="more"><a href="#"><b>Caluclate</b></a></span></div></div>
+
+
+            <div class="row px-0 pt-5">
+              <div class="text-gry mb-3 pt-5"><h2 class="mb-0 ps-3"><b>Results</b></h2></div>
+              <div class="col-md-8">
+               <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="lb-no border-bottom"></th>
+                    <th scope="col" class="border-bottom" > </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="border-start-0 tb-lh primary border-bottom">Dimple_100_60</th>
+                    <td class="border-bottom"></td>     
+                  </tr>
+                  <tr>
+                    <th scope="row" class="border-start-0 tb-lh primary border-bottom">Dimple_100_70</th>
+                    <td class="border-bottom"></td> 
+                  </tr>
+                  <tr>
+                    <th scope="row" class="border-start-0 tb-lh primary border-bottom">KneeTP</th>
+                    <td class="border-bottom"></td> 
+                  </tr>
+                  <tr>
+                    <th scope="row" class="border-start-0 tb-lh primary border-bottom">CenterTP</th>
+                    <td class="border-bottom"></td> 
+                  </tr>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th scope="col" class="lb-no"></th>
+                    <th scope="col" > </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+
+          <!--module 2 End-->
+        </div>
+        <div class="tab-pane fade" id="image" role="tabpanel" aria-labelledby="image-tab">
+          <div class="row px-0 pt-5 mt-4">
+            <div class="col-md-9">
+              <div class=" con-drop">
+                <div class="bg-secondary mb-3"><h1 class="mb-0 ps-3">Upload Image</h1></div>
+                <div class=" ps-3 pe-5 me-5">                  
+                  <form method = 'POST' enctype="multipart/form-data" action="image_pred" id="image_form">
+                    {% csrf_token %}
+                    <table class = 'w-50 table table-light' style="border-radius:10px;background-color:#FFFF99;">
+                     {% for field in upload_form %}
+                     <tr>
+                      <th>{{field.label}}</th>
+                      <td>{{ field }}</td>
+                    </tr>
+                    {% endfor %}
+                  </table>
+                  <div class="col-md-3"><span class="more"><button type="submit" class="btn-des"><b>Upload</b></button></span></div></div>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...wererewrwe
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row pe-4 pt-5 logo justify-content-end">
+    <div class="col-md-1"> <img src="https://www.dupont.com/content/dam/dupont/global-assets/logos/DuPont_tm_rgb.png"></div>
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script type="text/javascript">
+  $('#mp_li').addClass('active');
+
+  function upload(event){
+    event.preventDefault();
+    var data = new FormData($('#image_form').get(0));
+    $.ajax({
+      url: $(this).attr('action'),
+      type: $(this).attr('method'),
+      data: data+'&csrfmiddlewaretoken='+$('input[name=csrfmiddlewaretoken]').val(),
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function(data) {
+        console.log(data);
+        alert('success');
+      }
+    });
+    return false;
+  }
+
+  $(function() {
+    $('#image_form').submit(upload);
+  });
+</script>
+{% endblock %}

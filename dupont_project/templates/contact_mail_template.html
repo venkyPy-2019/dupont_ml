@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+</head>
+<body>
+  <div class="col-3 px-0 logo pb-0 py-1" style="height: 40px">
+    <a class="navbar-brand" href="#"><img src="https://www.dupont.com/content/dam/dupont/global-assets/logos/DuPont_tm_rgb.png" height="40px"></a>
+    <div class="logo-btext">SILICONVALLEY<br/>
+    TECHNOLOGY CENTER</div>
+  </div>
+  Hello Admin,  
+
+  <table style="border-color: 1px #ccc solid" border="1">
+    <tr>
+      <td><b>Company Name</b></td>
+      <td>{{ context.company_name }}</td>
+    </tr>   
+    <tr>
+      <td><b>Country</b></td>
+      <td>{{ context.country }}</td>
+    </tr>
+    <tr>
+      <td><b>Phone Number</b></td>
+      <td>{{ context.phone_no }}</td>
+    </tr>
+    <tr>
+      <td><b>Preferred Contact</b></td>
+      <td>{{ context.contact_prefer }}</td>
+    </tr>
+    <tr>
+      <td><b>Question</b></td>
+      <td>{{ context.question }}</td>
+    </tr>
+    <tr>
+      <td><b>Receive alerts</b></td>
+      {% if context.receive_alerts == '0' %}
+      <td>Yes</td>
+      {% else %}
+      <td>No</td>
+      {% endif %}
+    </tr>
+  </table>
+
+  
+
+  <p>Thanks,<br /><b>{{ context.first_name }} {{ context.last_name }}<b></p>
+  </body>
+  </html>

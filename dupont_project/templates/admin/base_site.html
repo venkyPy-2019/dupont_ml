@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+{% block extrahead %}
+<link rel="icon" href="{% static 'img/dupont_favicon_shorthand.ico' %}" sizes="48x48" />
+{% endblock %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="https://www.dupont.com/content/dam/dupont/global-assets/logos/DuPont_tm_rgb.png" height="40px"></a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

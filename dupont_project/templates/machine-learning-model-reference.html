@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<section style="padding-top: 120px;">
+ <div class="container px-3 pt-5 mt-5">
+  <div class="row pt-3">
+    <div class="col-md-12">
+     <span class="banner-text-in">Finding Trends with AI & <br/>Machine Learning Models</span>
+     <div class="row">
+      <div class="col-md-8 header-text pe-5">
+       <p class="pt-4 pe-4">
+         In the field of Artificial Intelligence and Machine Learning, there are supervised learning
+         techniques which take known data, fit it into a model to predict new unknown data. Two types
+         of supervised learning technique involve regression and classification. Regression is used to
+         predict outputs that are continuous. Classification is used to predict a discrete label. Explore
+       more of these concepts below.</p>
+     </div>
+     <div class="col-md-2"></div>
+     <div class="col-md-2 px-5"><span class="click"><a href="#">Click Here</a></span></div>
+   </div>
+   <div class="s-line"></div>
+ </div>
+</div>
+</div>
+</section>
+
+<section>
+  <div class="container px-3 pt-5 mt-5">
+    {% for reference in references %}
+    <div class="row px-2">
+      <div class="card px-1 border-0">
+        <div class="row g-0 border-bottom pb-5">
+          <div class="col-md-8 py-3">
+            <div class="card-body px-0 align-middle">
+              <div class="card-text primary sub-head">Machine Learning Model Refrence Page</div>        
+              <div class="card-title ml-head d-dark pb-3">{{ reference.title }}</div>
+              <p class="card-text">{{ reference.description|safe }}</p>
+            </div>
+          </div>
+          <div class="col-md-4 pt-5 ">
+            <div class="row  justify-content-end text-center">
+              <div class="col-10 pt-5 pe-0">
+                <img src="{{ reference.image.url }}" class="img-fluid">
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+<script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+<script type="text/javascript">
+  $('#ml_mr_li').addClass('active');
+</script>
+{% endblock %}
